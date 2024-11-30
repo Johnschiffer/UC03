@@ -1,1 +1,1 @@
-print("Olá Mundo")
+import requests
