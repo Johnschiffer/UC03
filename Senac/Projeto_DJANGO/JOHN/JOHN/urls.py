@@ -18,14 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 # importação da biblioteca http
 
-from contato import views as view_contato
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('home/', include('home.urls')),
-    path('blog/', include('blog.urls')),
-    path('contato/', view_contato.contato),
+    path('cadastro/', include('cadastro.urls')),
+    path('unidades/', include('unidades.urls')),
 
 
 ]
