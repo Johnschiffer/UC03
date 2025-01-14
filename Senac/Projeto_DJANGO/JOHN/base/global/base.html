@@ -7,17 +7,29 @@
     
         {% block texto %}
         {% endblock texto %}
+
+        <section class="bg-info">
+        {% block painel %}
+        {% endblock painel %}
+        </section>
+
+        <article class="container bg-secondary">
+            {% block formulario %} {% endblock formulario %}
+        </article>
     
     </main>
+    
+   
+
 
     <!-- Footer -->
     {% include 'global/partials/footer.html' %}
 
-    <!-- Modal -->
+    {% comment %} <!-- Modal -->
     {% include 'global/partials/modal.html' %}
 
     <!-- Scripts -->
-    {% include 'global/partials/scripts.html' %}
+    {% include 'global/partials/scripts.html' %} {% endcomment %}
     
 </body>
 </html>

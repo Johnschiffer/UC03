@@ -1,0 +1,155 @@
+/*formatação*/
+body {
+    background-color: #252525 !important;
+    color: #fff !important;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+
+    /* Adicionar espaçamento no topo para compensar */
+    padding-top: 150px;
+}
+
+html, body {
+    margin: 0;
+    /* padding: 0; */
+    width: 100%;
+}
+
+/* BOTAO COMPRAR */
+
+.btn-primary {
+    background-color: #4f4f50 !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+/* COR MENU*/
+nav.bg-dark {
+    background-color: #504e4e !important;
+    color: #fff !important;
+}
+
+/* CENTRALIZAR MENU */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.nav-item {
+    margin: 0 10px; /* Espaçamento opcional entre os itens */
+}
+
+
+
+
+main {
+    background-color: #181818;
+}
+/* Formatação em dois tags */
+header {
+    background-color: #302f2f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Configurando (header, nav, a) */
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+
+header nav a:hover{
+    color: #098bef;
+    text-decoration: underline;
+}
+
+.galeria img{
+    margin: 10px;
+    border: 2px solid #000000;
+    width: 300px;
+    height: 300px;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+aside {
+    text-align: center;
+
+}
+
+
+#midias {
+    margin: 20px;
+    text-align: center;
+}
+
+#midias video, #midias audio {
+    display: block;
+    margin: 10px auto;
+
+}
+
+/* compensaro header fixo ao rolar as seçõe */
+
+section {
+    scroll-margin-top: 120px;
+}
+
+.card {
+    background-color: #302f2f !important; /* Fundo branco */
+    color: #fff !important;
+    padding: 20px !important; /* Espaçamento interno */
+    border-radius: 8px !important; /* Bordas arredondadas, opcional */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important; /* Sombra sutil */
+}
+
+/* Ajustar responsividade */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}

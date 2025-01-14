@@ -1,0 +1,48 @@
+{% extends 'global/base.html' %}
+
+{% block formulario %}
+
+<div class="container">
+  <h1> Comentarios </h1>
+  <form action="{% url 'gravar_comentario' %}" method="post">
+    {% csrf_token %}
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" class="form-control">
+    
+    <label for="descricao">Comentario</label>
+    <input type="text" name="descricao" class="form-control">
+    
+    <hr>
+    <button class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<br>
+
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Comentario</th>
+                <th>Acções</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comentario in comentarios %} 
+            <tr>
+                <td>{{ comentario.id_comentario }}</td>
+                <td>{{ comentario.nome }}</td>
+                <td>{{ comentario.descricao }}</td>
+                <td>
+                    {% comment %} {% comment %} <a href="{% url 'editar' comentario.comentario %}" class="btn btn-primary">Editar</a> {% endcomment %}
+                <a href="{% url 'apagar' comentario.id_comentario %}" class="btn btn-danger">Apagar</a>
+                    {% comment %} <a href="{% url 'atualizar' pessoa.id_pessoa %}" class="btn btn-danger">Atualizar</a> {% endcomment %}
+            </tr> 
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock formulario %}
